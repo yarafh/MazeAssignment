@@ -5,6 +5,12 @@ TagManager:
   serializedVersion: 2
   tags:
   - Ground
+  - Enemy
+  - Hazard
+  - FinishLine
+  - Begin
+  - BeginTrigger
+  - Coin
   layers:
   - Default
   - TransparentFX
