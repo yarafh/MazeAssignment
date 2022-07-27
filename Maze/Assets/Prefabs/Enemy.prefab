@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 611860337931594354}
   - component: {fileID: 5162595899745209602}
   - component: {fileID: 2681267938437741461}
-  - component: {fileID: 341717793705214093}
+  - component: {fileID: 2515961725837924442}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -96,7 +96,7 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5063107
   m_Center: {x: 0, y: 0, z: 0.006310706}
---- !u!54 &341717793705214093
+--- !u!54 &2515961725837924442
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

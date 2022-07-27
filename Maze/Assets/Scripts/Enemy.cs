@@ -5,9 +5,9 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     // Update is called once per frame
-    void FixedUpdate()
+    private void FixedUpdate()
     {
-       
+
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -16,5 +16,10 @@ public class Enemy : MonoBehaviour
         {
             Destroy(collision.gameObject);
         }
+    }
+
+    private void LateUpdate()
+    {
+        Debug.Log("Enemy Defeated!");
     }
 }

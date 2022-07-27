@@ -1,21 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class FinishLineTrigger : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag == "Player")
+        if(other.gameObject.CompareTag("Player"))
         {
-            other.transform.localScale = other.transform.localScale + new Vector3(5,5,5);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            Debug.Log("YOU WIN!");
         }
-    }
-    private void OnTriggerExit(Collider other)
-    {
-     if(other.gameObject.tag == "Player")
-        {
-            other.transform.localScale = other.transform.localScale - new Vector3(5,5,5);
-        }   
     }
 }
