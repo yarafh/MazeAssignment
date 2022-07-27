@@ -11,10 +11,11 @@ public class CollectCoins : MonoBehaviour
         {
             money++;
             Destroy(other.gameObject);
+            Debug.Log("I have this much money: "+money);
         }
     }
-    void FixedUpdate()
+    void LateUpdate()
     {
-     Debug.Log("I have this much money: "+money);   
+     //Debug.Log("I have this much money: "+money);   
     }
 }

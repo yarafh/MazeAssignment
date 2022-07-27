@@ -10,16 +10,12 @@ public class Enemy : MonoBehaviour
 
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnControllerColliderHit(ControllerColliderHit hit)
     {
-        if(collision.gameObject.tag == "Enemy")
+        if(hit.gameObject.tag == "Enemy")
         {
-            Destroy(collision.gameObject);
+            Destroy(hit.gameObject);
+             Debug.Log("Enemy Defeated!");
         }
-    }
-
-    private void LateUpdate()
-    {
-        Debug.Log("Enemy Defeated!");
     }
 }

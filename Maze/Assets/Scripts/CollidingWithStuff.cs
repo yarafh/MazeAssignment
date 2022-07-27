@@ -4,20 +4,18 @@ using UnityEngine;
 
 public class CollidingWithStuff : MonoBehaviour
 {
-    
     [SerializeField] private int playerHealth = 3;
-    private void OnCollisionEnter(Collision other)
+
+    private void OnControllerColliderHit(ControllerColliderHit hit)
     {
-        if(other.gameObject.CompareTag("Hazard"))
+        if(hit.gameObject.tag == "Hazard")
         {
             playerHealth -= 1;
+            Debug.Log("Player Health: "+playerHealth);
+            Debug.Log("I probably should not touch that.");
         }
     }
-    private void OnCollisionExit(Collision other)
-    {
-        if(other.gameObject.CompareTag("Hazard"))
-            Debug.Log("I probably should not have touched that.");
-    }
+    
     //private void OnCollisionStay(Collision other)
     //{
         //float shrinkRate=0.1f *Time.deltaTime;
