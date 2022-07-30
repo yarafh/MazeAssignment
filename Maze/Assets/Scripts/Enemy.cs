@@ -15,7 +15,7 @@ public class Enemy : MonoBehaviour
         if(hit.gameObject.tag == "Enemy")
         {
             Destroy(hit.gameObject);
-             Debug.Log("Enemy Defeated!");
+            Debug.Log("Enemy Defeated!");
         }
     }
 }
